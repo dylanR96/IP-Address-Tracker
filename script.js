@@ -2,6 +2,11 @@ let enteredIp = document.getElementById("input-ip");
 const myButton = document.getElementById("button");
 const ipInfo = document.getElementById("ipInfo");
 const errorContainer = document.getElementById("errorMessage");
+let ipAddress = document.getElementById("ip-info-address");
+let ipLocation = document.getElementById("ip-info-location");
+let ipTimeZone = document.getElementById("ip-info-timeZone");
+let ipIsp = document.getElementById("ip-info-isp");
+
 myButton.addEventListener("click", (event) => {
   event.preventDefault();
   testIp(enteredIp.value);
@@ -26,15 +31,19 @@ async function myApi(enteredIp) {
 }
 
 function appendIpInfo(ipData, locationData, timeZData, ispData) {
-  let ipAddress = document.getElementById("ip-info-address");
-  let ipLocation = document.getElementById("ip-info-location");
-  let ipTimeZone = document.getElementById("ip-info-timeZone");
-  let ipIsp = document.getElementById("ip-info-isp");
-
-  ipAddress.textContent = ipData;
-  ipLocation.textContent = locationData;
-  ipTimeZone.textContent = timeZData;
-  ipIsp.textContent = ispData;
+  let ipInfo = {
+    "ip-info-address": ipData,
+    "ip-info-location": locationData,
+    "ip-info-timeZone": timeZData,
+    "ip-info-isp": ispData
+  };
+  
+  for (let id in ipInfo) {
+    let element = document.getElementById(id);
+    if (element) {
+      element.textContent = ipInfo[id];
+    }
+  }
 }
 
 let map = L.map('map', { zoomControl: false }).setView([0, 0], 19);
