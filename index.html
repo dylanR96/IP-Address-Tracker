@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
-  
+
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
@@ -18,29 +18,39 @@
 <body>
 
   <header class="header">
-
-    
-      <div class="header__container">
-        <h1 class="header__title">IP Address Tracker</h1>
-        <div>
-          <input class="header__input" type="text" placeholder="Search for any IP address or domain" name="ip-address" id="input-ip">
-          <button class="header__button" id="button">
+    <div class="header__container">
+      <h1 class="header__title">IP Address Tracker</h1>
+      <div>
+        <input class="header__input" type="text" placeholder="Search for any IP address or domain" name="ip-address"
+          id="input-ip">
+        <button class="header__button" id="button">
           <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
-          <path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6" />
+            <path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6" />
           </svg>
-          </button>
-          <span id="errorMessage"></span>
-        </div>
+        </button>
+        <span id="errorMessage"></span>
       </div>
+    </div>
     <div class="header__ip-container" id="ipInfo">
-      <h4 class="header__ip-info">IP ADDRESS</h4>
-      <span id="ip-info-address"></span>
-      <h4 class="header__ip-info">LOCATION</h4>
-      <span id="ip-info-location"></span>
-      <h4 class="header__ip-info">TIMEZONE</h4>
-      <span id="ip-info-timeZone"></span>
-      <h4 class="header__ip-info">ISP</h4>
-      <span id="ip-info-isp"></span>
+      <div>
+        <h4 class="header__ip-info">IP ADDRESS</h4>
+        <span id="ip-info-address"></span>
+      </div>
+      <div class="header__seperaters"></div>
+      <div>
+        <h4 class="header__ip-info">LOCATION</h4>
+        <span id="ip-info-location"></span>
+      </div>
+      <div class="header__seperaters"></div>
+      <div>
+        <h4 class="header__ip-info">TIMEZONE</h4>
+        <span id="ip-info-timeZone"></span>
+      </div>
+      <div class="header__seperaters"></div>
+      <div>
+        <h4 class="header__ip-info">ISP</h4>
+        <span id="ip-info-isp"></span>
+      </div>
     </div>
   </header>
   <main>
