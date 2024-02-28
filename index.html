@@ -22,31 +22,30 @@
       <h1 class="header__title">IP Address Tracker</h1>
       <div>
         <input class="header__input" type="text" placeholder="Search for any IP address or domain" name="ip-address"
-          id="input-ip">
-        <button class="header__button" id="button">
+          id="input-ip"><button class="header__button" id="button">
           <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
             <path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6" />
           </svg>
-        </button>
-        <span id="errorMessage"></span>
+        </button> 
       </div>
+      <span id="errorMessage" class="header__errorMessage"></span>
     </div>
     <div class="header__ip-container" id="ipInfo">
       <div>
         <h4 class="header__ip-info">IP ADDRESS</h4>
         <span id="ip-info-address"></span>
       </div>
-      <div class="header__seperaters"></div>
+      <div class="header__separaters"></div>
       <div>
         <h4 class="header__ip-info">LOCATION</h4>
         <span id="ip-info-location"></span>
       </div>
-      <div class="header__seperaters"></div>
+      <div class="header__separaters"></div>
       <div>
         <h4 class="header__ip-info">TIMEZONE</h4>
         <span id="ip-info-timeZone"></span>
       </div>
-      <div class="header__seperaters"></div>
+      <div class="header__separaters"></div>
       <div>
         <h4 class="header__ip-info">ISP</h4>
         <span id="ip-info-isp"></span>
@@ -54,7 +53,7 @@
     </div>
   </header>
   <main>
-    <div id="map"></div>
+    <div id="map" class="map"></div>
 
   </main>
   <script src="script.js"></script>

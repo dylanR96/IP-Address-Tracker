@@ -10,6 +10,7 @@ html {
 
 .header {
   background-image: url(images/pattern-bg-desktop.png);
+  background-size: cover;
   height: 34svh;
   display: flex;
   align-items: center;
@@ -17,6 +18,7 @@ html {
   flex-direction: column;
   color: white;
   font-size: 15px;
+  text-align: center;
 }
 
 .header__title {
@@ -34,18 +36,55 @@ html {
   height: 5rem;
   width: 45rem;
   border-radius: 10px 0px 0px 10px;
-  font-size: 20px;
+  font-size: 18px;
   padding-left: 2rem;
   font-weight: 500;
+  border: none;
+}
+
+::placeholder { 
+  color: rgba(0, 0, 0, 0.3); 
+}
+
+::-webkit-input-placeholder { 
+  color: rgba(0, 0, 0, 0.3); 
+}
+::-moz-placeholder { 
+  color: rgba(0, 0, 0, 0.3); 
+}
+:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3); 
 }
 
 .header__button {
   background-color: black;
-  height: 5rem;
+  height: 5.3rem;
   width: 5rem;
-  border: 0px solid black;
+  border: none;
   border-radius: 0px 10px 10px 0px;
 }
+
+.header__input:hover {
+  height: 5rem;
+  width: 45rem;
+  border-radius: 10px 0px 0px 10px;
+  font-size: 18px;
+  padding-left: 2rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.header__button:hover {
+  background-color: black;
+  height: 5rem;
+  width: 5rem;
+  border: none;
+  border-radius: 0px 10px 10px 0px;
+  cursor: pointer;
+}
+
+
 
 .header__ip-container {
   position: relative;
@@ -58,7 +97,7 @@ html {
   height: 20rem;
   width: 75svw;
   z-index: 1;
-  border: 0px solid white;
+  border: none;
   border-radius: 10px;
   gap: 1rem;
   padding: 0 5rem 0;
@@ -66,7 +105,7 @@ html {
   font-size: 20px;
 }
 
-.header__seperaters {
+.header__separaters {
   border: 1px solid hsl(0, 0%, 59%);;
   height: 9rem;
   margin-left: 3rem;
@@ -111,16 +150,17 @@ html {
   height: 5rem;
   width: 27rem;
   border-radius: 10px 0px 0px 10px;
-  font-size: 20px;
+  font-size: 14px;
   padding-left: 2rem;
   font-weight: 500;
+  border: none;
 }
 
 .header__button {
   background-color: black;
-  height: 5rem;
+  height: 5.3rem;
   width: 5rem;
-  border: 0px solid black;
+  border: none;
   border-radius: 0px 10px 10px 0px;
 }
 
@@ -149,11 +189,11 @@ html {
   margin-bottom: 1rem;
 }
 
-.header__seperaters {
+.header__separaters {
   display: none;
 }
 
-#map {
+.map {
   height: 80svh;
   z-index: 0;
 }

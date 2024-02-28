@@ -64,13 +64,16 @@ function myMap(lat, lng) {
   map.panTo([lat, lng]);
 }
 
+
 function testIp(ipAddress) {
   if (/^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(ipAddress)) {
     errorContainer.textContent = "";
     myApi(enteredIp.value);
   } else {
     errorContainer.textContent = "Invalid IP-address!";
+    errorContainer.style.color = "red";
+    enteredIp.addEventListener('keydown', () => {
+      errorContainer.textContent = "";
+    })
   }
 }
-//91.145.50.107
-//139.47.39.174
